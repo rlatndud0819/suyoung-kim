@@ -1,0 +1,468 @@
+/* ===================== 변수 ===================== */
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-tint: #eff4ff;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8fafc;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --max-width: 1080px;
+  --font-sans: "PretendardVariable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Malgun Gothic", sans-serif;
+}
+
+/* ===================== 리셋 ===================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  z-index: 100;
+}
+
+/* ===================== 레이아웃 ===================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.section-alt {
+  background: var(--color-bg-alt);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 88px 0;
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+    margin-bottom: 40px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===================== 버튼 ===================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease,
+    border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary-tint);
+  transform: translateY(-1px);
+}
+
+.btn-disabled {
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ===================== Hero ===================== */
+.hero {
+  padding: 96px 0 72px;
+  text-align: center;
+}
+
+.hero-inner h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-tagline {
+  margin-top: 16px;
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+}
+
+.hero-cta {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 140px 0 96px;
+  }
+
+  .hero-inner h1 {
+    font-size: 3rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+
+  .hero-cta {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ===================== 서비스 카드 ===================== */
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  height: 100%;
+}
+
+.service-card .service-icon {
+  font-size: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-primary-tint);
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===================== 작업 사례 카드 ===================== */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.work-thumb {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--color-primary-tint), #dbeafe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-body {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.work-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.work-body p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.work-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.work-stack .tag {
+  font-size: 0.8rem;
+}
+
+.work-link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ===================== 진행 방식 ===================== */
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px 20px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 92px;
+  text-align: center;
+}
+
+.process-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary-tint);
+  border: 1.5px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.process-step .process-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ===================== 경력·기술 타임라인 ===================== */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+  margin: 0 auto;
+  border-left: 2px solid var(--color-border);
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.timeline-item .timeline-period {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.timeline-item .timeline-org {
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.timeline-item .timeline-role {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin-top: 2px;
+}
+
+.tags {
+  margin: 32px auto 0;
+  max-width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--color-primary-tint);
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tag-muted {
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
+}
+
+/* ===================== Contact ===================== */
+.contact-inner {
+  text-align: center;
+}
+
+.contact-desc {
+  margin-top: 12px;
+  color: var(--color-text-muted);
+}
+
+.contact-buttons {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .contact-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ===================== Footer ===================== */
+.footer {
+  padding: 28px 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ===================== 스크롤 페이드인 ===================== */
+[data-fade] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-fade].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-fade] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
