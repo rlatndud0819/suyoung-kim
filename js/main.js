@@ -48,9 +48,9 @@
   // ---------- 제공 서비스 ----------
   function renderServices() {
     const grid = document.getElementById("services-grid");
-    data.services.forEach((service) => {
+    data.services.forEach((service, i) => {
       const card = el("div", { class: "card service-card", "data-fade": "" }, [
-        text("span", "service-icon", service.icon),
+        text("span", "service-num", String(i + 1).padStart(2, "0")),
         text("h3", null, service.title),
         text("p", null, service.description),
       ]);
@@ -104,9 +104,9 @@
   // ---------- 진행 방식 ----------
   function renderProcess() {
     const list = document.getElementById("process-steps");
-    data.process.forEach((step) => {
+    data.process.forEach((step, i) => {
       const item = el("li", { class: "process-step", "data-fade": "" }, [
-        text("span", "process-icon", step.icon),
+        text("span", "process-num", String(i + 1)),
         text("span", "process-label", step.label),
       ]);
       list.appendChild(item);

@@ -227,16 +227,13 @@ img {
   height: 100%;
 }
 
-.service-card .service-icon {
-  font-size: 1.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--color-primary-tint);
-  margin-bottom: 16px;
+.service-card .service-num {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 12px;
 }
 
 .service-card h3 {
@@ -325,7 +322,7 @@ img {
   text-align: center;
 }
 
-.process-icon {
+.process-num {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -334,7 +331,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 .process-step .process-label {

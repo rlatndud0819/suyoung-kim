@@ -15,19 +15,16 @@ window.SITE_DATA = {
 
   services: [
     {
-      icon: "🌐",
       title: "웹사이트·웹서비스 개발",
       description:
         "회사 소개 사이트, 예약·관리 페이지 등 필요한 웹사이트를 기획부터 완성까지 함께 만들어 드립니다.",
     },
     {
-      icon: "☁️",
       title: "서버 구축 및 클라우드 배포",
       description:
-        "AWS·NCP 서버 세팅부터 도메인 연결, HTTPS 보안 설정까지 서비스가 안정적으로 돌아가도록 구축합니다.",
+        "AWS 서버 세팅부터 도메인 연결, HTTPS 보안 설정까지 서비스가 안정적으로 돌아가도록 구축합니다.",
     },
     {
-      icon: "🔧",
       title: "유지보수 및 기능 추가",
       description:
         "운영 중 발생하는 오류 수정과 새로운 기능 추가까지, 서비스 출시 이후에도 책임지고 함께합니다.",
@@ -56,11 +53,11 @@ window.SITE_DATA = {
   ],
 
   process: [
-    { icon: "💬", label: "상담" },
-    { icon: "📝", label: "견적" },
-    { icon: "💻", label: "개발" },
-    { icon: "🚀", label: "배포" },
-    { icon: "🔄", label: "유지보수" },
+    { label: "상담" },
+    { label: "견적" },
+    { label: "개발" },
+    { label: "배포" },
+    { label: "유지보수" },
   ],
 
   // 경력·학력 타임라인입니다. 기간이 정해지지 않은 항목은 "[작성 예정]"으로 남겨두었습니다.
@@ -73,7 +70,7 @@ window.SITE_DATA = {
     {
       period: "[작성 예정]",
       org: "엔클라우드24",
-      role: "클라우드 MSP 엔지니어 (NCP, KT Cloud, AWS 인프라 운영)",
+      role: "클라우드 MSP 엔지니어 (AWS 인프라 운영)",
     },
     {
       period: "2028.02 졸업 예정",
@@ -83,7 +80,7 @@ window.SITE_DATA = {
   ],
 
   // 소개 문구에 직접 언급된 기술만 태그로 넣었습니다. 필요하면 추가/수정하세요.
-  skills: ["AWS", "NCP", "KT Cloud"],
+  skills: ["AWS"],
 
   contact: {
     email: "rlatndud0819@gmail.com",

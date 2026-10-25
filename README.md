@@ -8,7 +8,7 @@ my-website/
 ├── css/
 │   └── style.css      # 디자인
 ├── js/
-│   ├── data.js        # ⭐ 내용(텍스트·링크·작업 사례) 수정은 여기서만
+│   ├── data.js        # 내용(텍스트·링크·작업 사례) 수정은 여기서만
 │   └── main.js         # data.js를 읽어 화면을 그리는 코드 (평소엔 건드릴 필요 없음)
 ├── assets/
 │   └── favicon.svg     # 파비콘 (이니셜 아이콘)
