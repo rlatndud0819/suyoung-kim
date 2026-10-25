@@ -80,7 +80,7 @@ window.SITE_DATA = {
   ],
 
   // 소개 문구에 직접 언급된 기술만 태그로 넣었습니다. 필요하면 추가/수정하세요.
-  skills: ["AWS"],
+  skills: ["Java", "React", "JavaScript", "HTML", "CSS", "AWS"],
 
   contact: {
     email: "rlatndud0819@gmail.com",
